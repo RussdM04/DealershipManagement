@@ -1,26 +1,38 @@
-# 🚗 Car Dealership Management System (Node.js + Express)
+# 🚗 Luxury Car Dealership – Admin Inventory Management System
 
-A full-stack web application built with **Node.js**, **Express**, and **MongoDB** that allows users to browse vehicles and administrators to manage inventory.
+An **admin-only dealership inventory management system** built using **Node.js, Express, and MongoDB**.
 
-This project demonstrates RESTful routing, authentication, role-based access control, CRUD operations, and MVC architecture.
+This application allows dealership administrators to create, update, edit, and delete luxury vehicle inventory using RESTful API endpoints and HTML form-based routes.
+
+> ⚠️ This system is intended for internal administrative use only.
 
 ---
 
-## 📌 Features
+## 📌 Overview
 
-### 👤 User Features
-- Browse available vehicles
-- View detailed car listings
-- Search and filter vehicles
-- User registration & login
-- Secure authentication with hashed passwords
+This project demonstrates:
 
-### 🛠️ Admin / Manager Features
-- Add new vehicles
-- Edit vehicle details
-- Delete vehicle listings
-- Manage inventory dashboard
-- Role-based access control (Admin vs User)
+- RESTful API development
+- Full CRUD operations
+- MongoDB integration using Mongoose
+- Controller-based backend structure
+- Form handling with Express
+- Error handling and HTTP status codes
+- Clean separation of concerns
+
+---
+
+## 🔐 Access Model
+
+This system is designed strictly for:
+
+- Dealership Administrators
+- Inventory Managers
+- Internal Staff
+
+There are **no public customer-facing browsing routes** implemented.
+
+All routes allow full inventory control and are expected to be protected by authentication middleware in a production environment.
 
 ---
 
@@ -28,7 +40,41 @@ This project demonstrates RESTful routing, authentication, role-based access con
 
 - **Backend:** Node.js
 - **Framework:** Express.js
-- **Database:** MongoDB (Mongoose ODM)
-- **Authentication:** Express-session / JWT
-- **Templating Engine:** EJS / Handlebars
-- **Frontend:** HTML, CSS, Bootstrap
+- **Database:** MongoDB
+- **ODM:** Mongoose
+- **Middleware:** CORS, Express JSON parsing
+- **Architecture:** Controller-based structure
+
+---
+
+## 📂 Project Structure
+
+```
+
+dealership-management/
+│
+├── controllers/
+│ └── carController.js
+│
+├── models/
+│ └── carModel.js
+│
+├── views/
+│ ├── index.html
+│ ├── cars.html
+│ ├── add-car.html
+│ └── edit-car.html
+│
+├── public/
+│ ├── css/
+│ │ └── style.css 
+│ ├── js/
+│ │ ├── app.js 
+│ │ └── edit.js
+│ └── images/
+│
+├── server.js
+├── package.json
+└── package-lock.json
+
+```
