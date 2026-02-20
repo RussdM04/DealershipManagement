@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory • LuxAuto Admin</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <h1>LuxAuto Admin</h1>
+          <span>Inventory</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a class="btn" href="/index.html">Home</a>
+        <a class="btn btn-primary" href="/add-car.html">➕ Add Car</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="toolbar">
+      <div>
+        <div class="kicker">Dealership Inventory</div>
+        <div class="helper">Search by name, brand, or description.</div>
+      </div>
+      <input id="search" class="input" placeholder="Search… (e.g., Ferrari, Aventador)" />
+    </div>
+
+    <div id="emptyState" class="card" style="padding:16px; display:none;">
+      No cars yet. Add your first vehicle: <a href="/add-car.html">Add a Car</a>.
+    </div>
+
+    <div id="carGrid" class="grid"></div>
+  </main>
+
+  <footer class="container footer">
+    Images are served from <code>public/images</code>.
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

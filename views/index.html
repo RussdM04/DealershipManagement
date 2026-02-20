@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Car Dealership Management</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <h1>LuxAuto Admin</h1>
+          <span>Luxury Car Dealership Management</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a class="btn" href="/cars.html">View Inventory</a>
+        <a class="btn btn-primary" href="/add-car.html">➕ Add Car</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <div class="hero-grid">
+      <section class="card hero-copy">
+        <div class="kicker">Premium Inventory</div>
+        <h2>Manage a luxury fleet with a clean, modern dashboard.</h2>
+        <p>
+          This is a beginner-friendly MVC project using Node.js, Express, MongoDB (Mongoose),
+          and plain HTML/CSS/JavaScript. Add, edit, and remove luxury cars from the dealership inventory.
+        </p>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="/cars.html">Open Inventory</a>
+          <a class="btn" href="/add-car.html">Add a New Car</a>
+        </div>
+        <div class="helper" style="margin-top:12px;">
+          Tip: Put car images in <code>public/images</code> and use the filename in the form (e.g. <code>ferrari.jpg</code>).
+        </div>
+      </section>
+
+      <aside class="card hero-stats">
+        <div class="stat">
+          <div class="dot" aria-hidden="true"></div>
+          <div>
+            <b>CRUD Operations</b>
+            <span>Add, view, edit, delete cars. Includes JSON API endpoints + form-friendly POST helpers.</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="dot" aria-hidden="true" style="background: var(--accent2);"></div>
+          <div>
+            <b>Simple MVC</b>
+            <span>Models + Controllers + Static Views (no routes folder). Easy to understand and extend.</span>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="dot" aria-hidden="true" style="background: var(--ok);"></div>
+          <div>
+            <b>Modern UI</b>
+            <span>Luxury-themed dark style with gold accents and responsive layout.</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container footer">
+    Built for a school project • Update the sample images in <code>public/images</code> •
+    <a href="/cars.html">Inventory</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Car • LuxAuto Admin</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <h1>LuxAuto Admin</h1>
+          <span>Add Car</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a class="btn" href="/cars.html">Back to Inventory</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <section class="card form">
+      <div class="kicker">New Vehicle</div>
+      <h2 style="margin:10px 0 6px;">Add a luxury car</h2>
+      <div class="helper" style="margin-bottom:14px;">
+        Images load from <code>public/images</code>. Enter a filename like <code>ferrari.jpg</code>.
+      </div>
+
+      <form action="/cars" method="POST">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="e.g., Aventador SVJ" required />
+          </div>
+          <div class="field">
+            <label for="brand">Brand</label>
+            <input id="brand" name="brand" placeholder="e.g., Lamborghini" required />
+          </div>
+          <div class="field">
+            <label for="price">Price (CAD)</label>
+            <input id="price" name="price" type="number" min="0" step="1" placeholder="e.g., 649000" required />
+          </div>
+          <div class="field">
+            <label for="image">Image filename</label>
+            <input id="image" name="image" placeholder="e.g., lamborghini.jpg" required />
+            <div class="helper">File must exist in <code>public/images</code>.</div>
+          </div>
+          <div class="field" style="grid-column: 1 / -1;">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Write a short description..." required></textarea>
+          </div>
+        </div>
+
+        <div class="nav-actions" style="margin-top:14px;">
+          <button class="btn btn-primary" type="submit">✅ Save Car</button>
+          <a class="btn" href="/cars.html">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    Tip: You can add sample images like <code>ferrari.jpg</code> into <code>public/images</code>.
+  </footer>
+</body>
+</html>
